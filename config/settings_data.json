@@ -1,0 +1,79 @@
+{
+  "current": {
+    "colors_accent_1": "#a6602b",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Coffee Time ☕",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/coffeePoint-logo_brown.png",
+          "logo_width": 200,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "d1a9c19a-7348-444f-8d9d-e4c414f30e6b": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Navigation",
+              "menu": "main-menu"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
+            }
+          },
+          "1c53080a-ee81-46bf-9ea1-bdbf0b860734": {
+            "type": "text",
+            "settings": {
+              "heading": "Store Details",
+              "subtext": "<p><strong>📍 Blk 769 #01-456<br\/>Clementi West Street 2<br\/>Singapore 120769<\/strong><\/p><p><strong>📞 67766366<\/strong><\/p><p><strong>📧 hello@caffeinetown.com<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "d1a9c19a-7348-444f-8d9d-e4c414f30e6b",
+          "footer-0",
+          "1c53080a-ee81-46bf-9ea1-bdbf0b860734"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "4 Cofe Lovers ❤",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
