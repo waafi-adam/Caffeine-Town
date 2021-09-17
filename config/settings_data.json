@@ -72,6 +72,35 @@
           "enable_language_selector": true,
           "payment_enable": true
         }
+      },
+      "main-test-product": {
+        "type": "main-test-product",
+        "blocks": {
+          "6236a6f9-e1b9-47a0-ab98-94e60e5c6f99": {
+            "type": "tax_notice_block",
+            "settings": {
+              "tax_notice_text": "hello i am tax notice"
+            }
+          },
+          "d7481838-7d28-4894-8f90-1caca497d86a": {
+            "type": "shipping_notice_block",
+            "settings": {
+              "shipping_notice_text": "shipping in never"
+            }
+          },
+          "6b060334-a478-4304-a9c1-46a82cbd4a3a": {
+            "type": "product_price_block",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "6236a6f9-e1b9-47a0-ab98-94e60e5c6f99",
+          "d7481838-7d28-4894-8f90-1caca497d86a",
+          "6b060334-a478-4304-a9c1-46a82cbd4a3a"
+        ],
+        "settings": {
+          "show_reviews": true
+        }
       }
     },
     "content_for_index": []

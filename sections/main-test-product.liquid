@@ -1,0 +1,82 @@
+<br>
+hello from the section file
+<br>
+
+<h2> {{product.title}}</h2>
+
+<img src="{{product.featured_image | img_url:'300x'}}" />
+
+{% comment %}
+<h4> {{section.settings.tax}} </h4>
+<h4> {{section.settings.shipping}} </h4>
+{% endcomment %}
+{% comment %} 
+^since we shifted these settings into blocks sections, we should make a more dynamic version where client side can actually change around the position according to the blocks they choose as seen below.
+{% endcomment %}
+
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when "tax_notice_block" %}
+            <h4>{{block.settings.tax_notice_text}}</h4>
+        {% when "shipping_notice_block" %}
+            <h4>{{block.settings.shipping_notice_text}}</h4>
+        {% when "product_price_block" %}
+            <h4>{{product.price}}</h4>
+        {% comment %}
+        ^as youy can see on the product price block we can see that the blocks don't have to rely on the settings set on the their block settings. They also render public or global properties like product price in this case
+        {% endcomment %}
+    {% endcase %}
+{% endfor %}
+
+{% if section.settings.show_reviews %}
+<h4> ⭐⭐⭐⭐⭐ </h4>
+{% endif %}
+
+{% schema %}
+
+{
+    "name":"product page content",
+    "settings":[
+
+        {
+            "id":"show_reviews",
+            "label":"show reviews?",
+            "type":"checkbox"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "tax_notice_block",
+            "name": "Tax Notice",
+            "limit":1,
+            "settings": [
+                {
+                    "id":"tax_notice_text",
+                    "label":"enter tax notice",
+                    "type":"text"
+                }
+            ]
+        },
+        {
+            "type":"shipping_notice_block",
+            "name":"Shiping Notice",
+            "limit":1,
+            "settings":[
+                {
+                    "id":"shipping_notice_text",
+                    "label":"enter shipping notice",
+                    "type":"text"
+                }
+            ]
+        },
+        {
+            "type":"product_price_block",
+            "name":"Product price",
+            "limit":1,
+            "settings":[]
+
+        }
+    ]
+}
+
+{% endschema %}
