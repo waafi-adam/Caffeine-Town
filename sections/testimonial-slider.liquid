@@ -1,0 +1,87 @@
+<div class="slider">
+	{% for block in section.blocks %}
+		{% case block.type %}
+			{% when "testimonial_slide_block" %}
+				<div class="card-container">
+					<div class="card">
+						<div class="quote-block">
+							<p>
+								{{block.settings.attestant_quote_text}}
+							</p>
+						</div>
+						<div class="avatar-block">
+							<div class="avatar-pic-wrapper">
+								<img src="{{block.settings.attestant_avatar_pic | img_url: '300x'}}" alt="">
+							</div>
+							<div class="avatar-detail">
+								<h4>{{block.settings.attestant_name}}</h4>
+								<p>{{block.settings.attestant_position}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		{% endcase %}
+	{% endfor %}
+</div>
+
+{% schema %}
+
+    {
+    	"name": "testimonial slider",
+    	"settings": [
+			{
+				"id":"show_line",
+				"label":"remove line?",
+				"type":"checkbox"
+			}
+		],
+		"blocks": [
+			{
+				"type": "testimonial_slide_block",
+				"name": "Testimonial Slide",
+				"settings": [
+					{
+						"id":"attestant_quote_text",
+						"label":"enter testimonial quote",
+						"type":"richtext",
+						"default":"<p>Galão acerbic ristretto sit ,arabica french press froth.</p>"
+					},
+					{
+						"id":"attestant_avatar_pic",
+						"label":"Insert attestant's avatar picture",
+						"type":"image_picker"
+					},
+					{
+						"id":"attestant_name",
+						"label":"Attestant Name",
+						"type": "text",
+						"default":"John Doe"
+					},
+					{
+						"id":"attestant_position",
+						"label":"Attestant Position",
+						"type":"text",
+						"default":"CEO of Something"
+					}
+				]
+			}
+		],
+		"presets": [
+		    {
+				"name": "testimonial slider",
+				"blocks": [
+					{
+					"type": "testimonial_slide_block"
+					},
+					{
+					"type": "testimonial_slide_block"
+					},
+					{
+					"type": "testimonial_slide_block"
+					}
+				]
+		    }
+    	]
+    }
+
+{% endschema %}

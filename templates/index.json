@@ -145,6 +145,66 @@
         "desktop_layout": "left",
         "mobile_layout": "collage"
       }
+    },
+    "1631949874ab4f0052": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "7c9e4d14-168c-4a1d-8538-aae44164da64": {
+          "type": "testimonial_slide_block",
+          "settings": {
+            "attestant_quote_text": "<p>Flavour, ristretto arabica, strong affogato cream breve, wings body as french press bar. <\/p>",
+            "attestant_avatar_pic": "shopify:\/\/shop_images\/user_1.jpg",
+            "attestant_name": "Mike",
+            "attestant_position": ""
+          }
+        },
+        "3db4a03b-8c94-4b46-a0f8-5a2468de61a5": {
+          "type": "testimonial_slide_block",
+          "settings": {
+            "attestant_quote_text": "<p>Galão acerbic ristretto sit ,arabica french press froth.<\/p>",
+            "attestant_avatar_pic": "shopify:\/\/shop_images\/user_2.jpg",
+            "attestant_name": "Linda",
+            "attestant_position": ""
+          }
+        },
+        "f9f65bc3-e72a-4aec-8a6c-3da9505244e2": {
+          "type": "testimonial_slide_block",
+          "settings": {
+            "attestant_quote_text": "<p>Flavour, ristretto arabica, strong affogato cream breve.<\/p>",
+            "attestant_avatar_pic": "shopify:\/\/shop_images\/user_3.jpg",
+            "attestant_name": "John",
+            "attestant_position": ""
+          }
+        },
+        "e2e4cea4-a630-49b7-a7d6-9fd0f701213d": {
+          "type": "testimonial_slide_block",
+          "settings": {
+            "attestant_quote_text": "<p>Galão acerbic ristretto sit ,arabica french press froth.<\/p>",
+            "attestant_avatar_pic": "shopify:\/\/shop_images\/user_4.jpg",
+            "attestant_name": "Bob",
+            "attestant_position": ""
+          }
+        },
+        "ac990536-b11c-4266-af04-da6711ab9b78": {
+          "type": "testimonial_slide_block",
+          "settings": {
+            "attestant_quote_text": "<p>Ristretto arabica, strong affogato cream breve, wings body as french press bar. <\/p>",
+            "attestant_avatar_pic": "shopify:\/\/shop_images\/user_5.jpg",
+            "attestant_name": "Samuel",
+            "attestant_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "7c9e4d14-168c-4a1d-8538-aae44164da64",
+        "3db4a03b-8c94-4b46-a0f8-5a2468de61a5",
+        "f9f65bc3-e72a-4aec-8a6c-3da9505244e2",
+        "e2e4cea4-a630-49b7-a7d6-9fd0f701213d",
+        "ac990536-b11c-4266-af04-da6711ab9b78"
+      ],
+      "settings": {
+        "show_line": false
+      }
     }
   },
   "order": [
@@ -153,6 +213,7 @@
     "1631776863ba10e255",
     "image_text",
     "16317785289817f5b9",
-    "1631778530127c076a"
+    "1631778530127c076a",
+    "1631949874ab4f0052"
   ]
 }

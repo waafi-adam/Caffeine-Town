@@ -2112,3 +2112,178 @@ details-disclosure > details {
   color: rgb(var(--color-foreground));
   word-break: break-word;
 }
+
+
+/* TESTIMONIAL SLIDER */
+
+.slider {
+  padding: 100px 0;
+  /* width: 90%; */
+  /* background: rgb(255, 236, 223); */
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  width: 90%;
+  margin: 20px  auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-block {
+  font-size: 2rem;
+  border-left: 5px solid brown;
+  padding: 0 0 0 20px;
+}
+
+.quote-block>p {
+  margin: 0;
+}
+
+.avatar-block {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar-pic-wrapper {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.avatar-pic-wrapper>img {
+  width: 100%;
+}
+
+.avatar-detail {
+  margin-left: 10px;
+}
+
+.avatar-detail>h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.avatar-detail>p {
+  margin: 0;
+}
+
+.slick-prev {
+  position: absolute !important;
+  left: 25% !important;
+  z-index: 10 !important;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.198) !important;
+}
+
+.slick-next {
+  position: absolute!important;
+  right: 25% !important;
+  z-index: 10 !important;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.198) !important;
+}
+
+.slick-next,
+.slick-prev {
+  width: 50px !important;
+  height: 50px !important;
+  background: #7E6554 !important;
+  border-radius: 100% !important;
+}
+
+.slick-prev:before {
+  content: '<' !important;
+  font-weight: bold !important;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.slick-next:before {
+  content: '>' !important;
+  font-weight: bold !important;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.slick-next:focus,
+.slick-prev:focus {
+  background: #7E6554;
+}
+
+.slick-next:hover,
+.slick-prev:hover {
+  background: #7E6554;
+}
+
+.slick-slide {
+  opacity: .5;
+  transition: .3s;
+}
+
+.slick-center {
+  opacity: 1;
+  transition: .3s;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+  color: brown;
+}
+
+@media only screen and (max-width: 1650px) {
+  .card {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .quote-block {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .quote-block {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .card {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .quote-block {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .card {
+    width: 75%;
+  }
+
+  .quote-block {
+    font-size: 1.2rem;
+  }
+}
+
+/* TESTIMONIAL SLIDER END */
