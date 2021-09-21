@@ -321,35 +321,29 @@
                   <table style="width:100%">
                     <tr>
                       <td><b>Taste</b></td>
-                      <td>Hazel, Sweet Fruites</td>
+                      <td>{{block.settings.taste}}</td>
                     </tr>
                     <tr>
                       <td><b>Strength</b></td>
-                      <td class="bean-rating">
-                          {% render 'icon-bean' %}
-                          {% render 'icon-bean' %}
-                          {% render 'icon-bean' %}
-                          {% render 'icon-bean' %}
-                          {% render 'icon-bean-outline' %}
+                      <td class="bean-rating-container">
+                          {% assign strength = block.settings.strength | plus:0 %}
+                          {% render 'bean-rating', rating:strength %}
                       </td>
                     </tr>
                     <tr>
                       <td><b>Acidity</b></td>
-                      <td class="bean-rating">
-                          {% render 'icon-bean' %}
-                          {% render 'icon-bean' %}
-                          {% render 'icon-bean-outline' %}
-                          {% render 'icon-bean-outline' %}
-                          {% render 'icon-bean-outline' %}
+                      <td class="bean-rating-container">
+                          {% assign acidity = block.settings.acidity | plus:0 %}
+                          {% render 'bean-rating', rating:acidity %}
                       </td>
                     </tr>
                     <tr>
                       <td><b>Type</b></td>
-                      <td>100% Arabica, Single Origin</td>
+                      <td>{{block.settings.type}}</td>
                     </tr>
                     <tr>
                       <td><b>Origin</b></td>
-                      <td>Ethiopia</td>
+                      <td>{{block.settings.origin}}</td>
                     </tr>
                   </table>
                 </div>
@@ -782,7 +776,33 @@
       "type": "coffee_info",
       "name": "Coffee Info",
       "limit": 1,
-      "settings": []
+      "settings": [
+        {
+          "id": "taste",
+          "label": "taste",
+          "type": "text"
+        },
+        {
+          "id": "strength",
+          "label": "strength",
+          "type": "text"
+        },
+        {
+          "id": "acidity",
+          "label": "acidity",
+          "type": "text"
+        },
+        {
+          "id": "type",
+          "label": "type",
+          "type": "text"
+        },
+        {
+          "id": "origin",
+          "label": "origin",
+          "type": "text"
+        }
+      ]
     }
   ],
   "settings": [
