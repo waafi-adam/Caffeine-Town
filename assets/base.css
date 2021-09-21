@@ -2287,3 +2287,14 @@ details-disclosure > details {
 }
 
 /* TESTIMONIAL SLIDER END */
+
+/* COFFEE INFO */
+.bean-rating{
+  display: flex;
+}
+.bean-rating svg{
+  max-height: 30px;
+  margin: 10px 0;
+  max-width: 30px;
+}
+/* COFFEE INFO END */

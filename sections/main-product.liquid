@@ -304,6 +304,58 @@
             </div>
 
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+          {% comment %} COFFEE INFO BLOCK {% endcomment %}
+          {%- when 'coffee_info' -%}
+            <div class="product__accordion accordion" {{ block.shopify_attributes }}>
+              <details>
+                <summary>
+                  <div class="summary__title">
+                    {% render 'icon-accordion', icon: 'leaf' %}
+                    <h2 class="h4 accordion__title">
+                      Coffee Info
+                    </h2>
+                  </div>
+                  {% render 'icon-caret' %}
+                </summary>
+                <div class="accordion__content rte">
+                  <table style="width:100%">
+                    <tr>
+                      <td><b>Taste</b></td>
+                      <td>Hazel, Sweet Fruites</td>
+                    </tr>
+                    <tr>
+                      <td><b>Strength</b></td>
+                      <td class="bean-rating">
+                          {% render 'icon-bean' %}
+                          {% render 'icon-bean' %}
+                          {% render 'icon-bean' %}
+                          {% render 'icon-bean' %}
+                          {% render 'icon-bean-outline' %}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><b>Acidity</b></td>
+                      <td class="bean-rating">
+                          {% render 'icon-bean' %}
+                          {% render 'icon-bean' %}
+                          {% render 'icon-bean-outline' %}
+                          {% render 'icon-bean-outline' %}
+                          {% render 'icon-bean-outline' %}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><b>Type</b></td>
+                      <td>100% Arabica, Single Origin</td>
+                    </tr>
+                    <tr>
+                      <td><b>Origin</b></td>
+                      <td>Ethiopia</td>
+                    </tr>
+                  </table>
+                </div>
+              </details>
+            </div>
+          {% comment %} COFFEE INFO BLOCK END {% endcomment %}
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -725,6 +777,12 @@
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
         }
       ]
+    },
+    {
+      "type": "coffee_info",
+      "name": "Coffee Info",
+      "limit": 1,
+      "settings": []
     }
   ],
   "settings": [
